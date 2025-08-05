@@ -1,4 +1,4 @@
-﻿namespace AdvancedAutoClicker
+namespace AdvancedAutoClicker
 {
     partial class MainForm
     {
@@ -34,11 +34,11 @@
             this.rbSingle = new System.Windows.Forms.RadioButton();
             this.gbSingleClick = new System.Windows.Forms.GroupBox();
             this.gbSequence = new System.Windows.Forms.GroupBox();
-            this.btnClearSequence = new System.Windows.Forms.Button();
-            this.numericPointDelay = new System.Windows.Forms.NumericUpDown();
-            this.label4 = new System.Windows.Forms.Label();
-            this.btnRecord = new System.Windows.Forms.Button();
             this.lblStatus = new System.Windows.Forms.Label();
+            this.btnRecord = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.numericPointDelay = new System.Windows.Forms.NumericUpDown();
+            this.btnClearSequence = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericInterval)).BeginInit();
             this.gbClickType.SuspendLayout();
             this.gbCoordinates.SuspendLayout();
@@ -96,9 +96,9 @@
             this.gbClickType.Controls.Add(this.rbDoubleClick);
             this.gbClickType.Controls.Add(this.rbRightClick);
             this.gbClickType.Controls.Add(this.rbLeftClick);
-            this.gbClickType.Location = new System.Drawing.Point(6, 45);
+            this.gbClickType.Location = new System.Drawing.Point(12, 250);
             this.gbClickType.Name = "gbClickType";
-            this.gbClickType.Size = new System.Drawing.Size(348, 45);
+            this.gbClickType.Size = new System.Drawing.Size(360, 45);
             this.gbClickType.TabIndex = 3;
             this.gbClickType.TabStop = false;
             this.gbClickType.Text = "Тип клика";
@@ -249,9 +249,8 @@
             // gbSingleClick
             // 
             this.gbSingleClick.Controls.Add(this.label1);
-            this.gbSingleClick.Controls.Add(this.gbCoordinates);
             this.gbSingleClick.Controls.Add(this.numericInterval);
-            this.gbSingleClick.Controls.Add(this.gbClickType);
+            this.gbSingleClick.Controls.Add(this.gbCoordinates);
             this.gbSingleClick.Location = new System.Drawing.Point(12, 62);
             this.gbSingleClick.Name = "gbSingleClick";
             this.gbSingleClick.Size = new System.Drawing.Size(360, 182);
@@ -274,15 +273,32 @@
             this.gbSequence.TabStop = false;
             this.gbSequence.Text = "Последовательность кликов";
             // 
-            // btnClearSequence
+            // lblStatus
             // 
-            this.btnClearSequence.Location = new System.Drawing.Point(6, 45);
-            this.btnClearSequence.Name = "btnClearSequence";
-            this.btnClearSequence.Size = new System.Drawing.Size(348, 23);
-            this.btnClearSequence.TabIndex = 0;
-            this.btnClearSequence.Text = "Очистить последовательность";
-            this.btnClearSequence.UseVisualStyleBackColor = true;
-            this.btnClearSequence.Click += new System.EventHandler(this.btnClearSequence_Click);
+            this.lblStatus.Location = new System.Drawing.Point(6, 117);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(348, 62);
+            this.lblStatus.TabIndex = 4;
+            this.lblStatus.Text = "Готов к записи";
+            // 
+            // btnRecord
+            // 
+            this.btnRecord.Location = new System.Drawing.Point(6, 74);
+            this.btnRecord.Name = "btnRecord";
+            this.btnRecord.Size = new System.Drawing.Size(348, 40);
+            this.btnRecord.TabIndex = 3;
+            this.btnRecord.Text = "Записать последовательность";
+            this.btnRecord.UseVisualStyleBackColor = true;
+            this.btnRecord.Click += new System.EventHandler(this.btnRecord_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 21);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(107, 13);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Задержка после (мс):";
             // 
             // numericPointDelay
             // 
@@ -306,38 +322,22 @@
             0,
             0});
             // 
-            // label4
+            // btnClearSequence
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 21);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(107, 13);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Задержка после (мс):";
-            // 
-            // btnRecord
-            // 
-            this.btnRecord.Location = new System.Drawing.Point(6, 74);
-            this.btnRecord.Name = "btnRecord";
-            this.btnRecord.Size = new System.Drawing.Size(348, 40);
-            this.btnRecord.TabIndex = 3;
-            this.btnRecord.Text = "Записать последовательность";
-            this.btnRecord.UseVisualStyleBackColor = true;
-            this.btnRecord.Click += new System.EventHandler(this.btnRecord_Click);
-            // 
-            // lblStatus
-            // 
-            this.lblStatus.Location = new System.Drawing.Point(6, 117);
-            this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(348, 62);
-            this.lblStatus.TabIndex = 4;
-            this.lblStatus.Text = "Готов к записи";
+            this.btnClearSequence.Location = new System.Drawing.Point(6, 45);
+            this.btnClearSequence.Name = "btnClearSequence";
+            this.btnClearSequence.Size = new System.Drawing.Size(348, 23);
+            this.btnClearSequence.TabIndex = 0;
+            this.btnClearSequence.Text = "Очистить последовательность";
+            this.btnClearSequence.UseVisualStyleBackColor = true;
+            this.btnClearSequence.Click += new System.EventHandler(this.btnClearSequence_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 374);
+            this.Controls.Add(this.gbClickType);
             this.Controls.Add(this.gbSequence);
             this.Controls.Add(this.gbSingleClick);
             this.Controls.Add(this.gbMode);
